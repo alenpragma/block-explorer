@@ -1,0 +1,8 @@
+/* banner image */
+.banner-bg {
+  background-image: url(https://i.postimg.cc/FsHqTx5J/4578692.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}

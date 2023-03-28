@@ -1,0 +1,17 @@
+/* hide nav dropdown default icons of react bootstrap */
+.dropdown-toggle::after {
+  content: "";
+  position: absolute;
+  display: none !important;
+  color: rgba(7, 176, 255, 0.164);
+}
+
+/* target the navbar dropdown menu to set dark and night mode */
+.dark .dropdown-menu {
+  background-color: #141414;
+}
+
+/* remove box shadow from navbar toggler */
+.navbar-toggler:focus {
+  box-shadow: none !important;
+}

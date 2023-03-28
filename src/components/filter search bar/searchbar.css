@@ -1,0 +1,31 @@
+.search-bar .dropdown-toggle {
+  background-color: #079ce0 !important;
+  color: #fff !important;
+  border: none !important;
+  outline: none !important;
+}
+.search-bar .dropdown-toggle:hover {
+  background-color: rgba(7, 176, 255, 0.164) !important;
+}
+.common-search-bar::placeholder {
+  animation: marquee 10s linear infinite !important;
+  overflow: hidden;
+  -webkit-animation: marquee 10s linear infinite !important;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(100%) !important;
+    -webkit-transform: translateX(100%) !important;
+    -moz-transform: translateX(100%) !important;
+    -ms-transform: translateX(100%) !important;
+    -o-transform: translateX(100%) !important;
+  }
+  100% {
+    transform: translateX(-100%) !important;
+    -webkit-transform: translateX(-100%) !important;
+    -moz-transform: translateX(-100%) !important;
+    -ms-transform: translateX(-100%) !important;
+    -o-transform: translateX(-100%) !important;
+  }
+}
