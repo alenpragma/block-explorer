@@ -8,6 +8,7 @@ import {
 } from "react-router-dom";
 import Home from "./pages/Home";
 import RootLayout from "./components/RootLayout";
+import { useSelector } from "react-redux";
 
 let router = createBrowserRouter(
   createRoutesFromElements(
@@ -18,7 +19,12 @@ let router = createBrowserRouter(
 );
 
 const App = () => {
-  return <RouterProvider router={router} />;
+  let themeData = useSelector((state) => state.theme);
+  return (
+    <div className={themeData.themeState === "true" ? "" : "dark"}>
+      <RouterProvider router={router} />
+    </div>
+  );
 };
 
 export default App;

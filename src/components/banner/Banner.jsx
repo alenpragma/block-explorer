@@ -8,7 +8,10 @@ const Banner = () => {
       <div className="h-[45vh]  container  ">
         <div className=" relative h-[100%]">
           <div className=" absolute w-[full]  lg:w-[55%] flex items-center   z-[9] h-[100%]">
-            <SearchBar />
+            <div className="w-full">
+              <h4 className="!text-primary font-normal">Mindchain Explorer</h4>
+              <SearchBar />
+            </div>
           </div>
         </div>
       </div>

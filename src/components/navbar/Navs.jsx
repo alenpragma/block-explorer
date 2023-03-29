@@ -33,7 +33,7 @@ const Navs = () => {
         <Navbar.Brand href="/">
           <img
             src="https://i.postimg.cc/VN3qymVC/Untitled-1-01.png"
-            className={!signInShow ? "w-[100px] h-auto" : "w-[150px] h-auto"}
+            className={!signInShow ? "w-[120px] h-auto" : "w-[150px] h-auto"}
           />
         </Navbar.Brand>
         {!signInShow && (
@@ -48,7 +48,7 @@ const Navs = () => {
             </div>
           </Nav.Link>
         )}
-        <Navbar.Toggle aria-controls="basic-navbar-nav">
+        <Navbar.Toggle aria-controls="basic-navbar-nav" className="p-0">
           <HiOutlineMenuAlt3
             className={`text-primary ${click ? "hidden" : "block"}`}
             onClick={handleClick}
