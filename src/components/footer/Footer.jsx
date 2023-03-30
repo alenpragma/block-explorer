@@ -57,7 +57,7 @@ const Footer = () => {
                   className={"!text-[24px]"}
                   onClick={themeChange}
                   title={
-                    themeChanging.themeState === "true" ? <BiSun /> : <BiMoon />
+                    themeChanging.themeState === "true" ? <BiMoon /> : <BiSun />
                   }
                 />
               </div>

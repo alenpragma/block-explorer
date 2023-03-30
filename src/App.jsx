@@ -21,7 +21,7 @@ let router = createBrowserRouter(
 const App = () => {
   let themeData = useSelector((state) => state.theme);
   return (
-    <div className={themeData.themeState === "true" ? "" : "dark"}>
+    <div className={themeData.themeState === "true" ? "" : "dark bg-liteBlack"}>
       <RouterProvider router={router} />
     </div>
   );

@@ -54,7 +54,7 @@ const Navs = () => {
             onClick={handleClick}
           />
           <FaTimesCircle
-            className={`text-primary ${click ? "block" : "hidden"}`}
+            className={`text-primaryColor ${click ? "block" : "hidden"}`}
             onClick={handleClick}
           />
         </Navbar.Toggle>
@@ -71,12 +71,12 @@ const Navs = () => {
                   key={index}
                   className="group dark:!text-white text-black"
                 >
-                  <span className="group-hover:!text-primary">Home</span>
+                  <span className="group-hover:!text-primaryColor">Home</span>
                 </Nav.Link>
               ) : (
                 <NavDropdown
                   title={
-                    <div className="group-hover:!text-primary !text-black flex items-center gap-x-2 dark:!text-white">
+                    <div className="group-hover:!text-primaryColor !text-black flex items-center gap-x-2 dark:!text-white">
                       {item.name}
                       <TfiAngleDown
                         className="text-[10px]"
@@ -101,7 +101,7 @@ const Navs = () => {
                       as={Link}
                       to={dropdownItem.link}
                       key={dropdownIndex}
-                      className="hover:!text-primary dark:hover:!bg-primaryHover hover:!bg-primaryHover dark:bg-blackBg dark:text-white"
+                      className="hover:!text-primaryColor dark:hover:!bg-primaryHover hover:!bg-primaryHover dark:bg-blackBg dark:text-white"
                     >
                       {dropdownItem.name}
                     </NavDropdown.Item>
@@ -117,8 +117,8 @@ const Navs = () => {
                 // key={index}
               >
                 <div className="group !text-black flex items-center gap-x-2 dark:!text-white border-l pl-5">
-                  <BiLogInCircle className="text-[18px] group-hover:text-primary " />
-                  <span className="group-hover:text-primary">Sign In</span>
+                  <BiLogInCircle className="text-[18px] group-hover:text-primaryColor " />
+                  <span className="group-hover:text-primaryColor">Sign In</span>
                 </div>
               </Nav.Link>
             )}

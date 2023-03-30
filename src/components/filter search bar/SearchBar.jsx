@@ -47,7 +47,7 @@ const SearchBar = () => {
           aria-label="Text input with dropdown button"
           className="!shadow-none  common-search-bar !border-primary dark:!bg-blackBg dark:!text-white"
         />
-        <Button className="!bg-primary !border-primary hover:!border-primaryHover hover:!bg-primaryHover">
+        <Button className="!bg-primary !border-primary bg-primaryColor hover:!border-primaryHover hover:!bg-primaryHover">
           <BiSearchAlt />
         </Button>
       </InputGroup>
