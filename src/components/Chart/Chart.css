@@ -1,0 +1,12 @@
+.recharts-cartesian-grid-horizontal line {
+  stroke: none !important;
+}
+.recharts-cartesian-grid-vertical line {
+  stroke: none !important;
+}
+.recharts-cartesian-axis-line {
+  stroke: none !important;
+}
+.recharts-layer line {
+  stroke: none !important;
+}

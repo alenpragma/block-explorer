@@ -23,7 +23,7 @@ const LatestTransaction = () => {
             >
               <div className="md:w-[25%] flex items-center">
                 <div className="mr-2 w-[50px] h-[50px] rounded-md shadow-md flex items-center justify-center text-primaryColor font-semibold">
-                  Bk
+                  Tx
                 </div>
                 <div>
                   <Link className="text-primaryColor" to={trans.link}>

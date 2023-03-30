@@ -4,6 +4,7 @@ import { BsGraphUpArrow } from "react-icons/bs";
 import { SiHiveBlockchain } from "react-icons/si";
 import { FaUserCircle } from "react-icons/fa";
 import { Doughnut } from "react-chartjs-2";
+import Chart from "../Chart/Chart";
 
 const HomeChartBar = () => {
   return (
@@ -79,7 +80,7 @@ const HomeChartBar = () => {
             </div>
           </div>
           <div className="md:pl-4   w-full md:w-[33.33333333333333%]  text-ashText">
-            Chart Here
+            <Chart />
           </div>
         </div>
       </div>
