@@ -32,8 +32,8 @@ const Navs = () => {
       <Container>
         <Navbar.Brand href="/">
           <img
-            src="https://i.postimg.cc/VN3qymVC/Untitled-1-01.png"
-            className={!signInShow ? "w-[120px] h-auto" : "w-[150px] h-auto"}
+            src="https://i.postimg.cc/SN5XpHXn/MINDCH-45-01-1.png"
+            className={!signInShow ? "w-[150px] h-auto" : "w-[190px] h-auto "}
           />
         </Navbar.Brand>
         {!signInShow && (
@@ -50,11 +50,15 @@ const Navs = () => {
         )}
         <Navbar.Toggle aria-controls="basic-navbar-nav" className="p-0">
           <HiOutlineMenuAlt3
-            className={`text-primary ${click ? "hidden" : "block"}`}
+            className={`text-primary ${
+              click ? "hidden text-[25px]" : "block text-[25px]"
+            }`}
             onClick={handleClick}
           />
           <FaTimesCircle
-            className={`text-primaryColor ${click ? "block" : "hidden"}`}
+            className={`text-primaryColor text-[25px] ${
+              click ? "block" : "hidden"
+            }`}
             onClick={handleClick}
           />
         </Navbar.Toggle>

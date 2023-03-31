@@ -79,8 +79,10 @@ const HomeChartBar = () => {
               </div>
             </div>
           </div>
-          <div className="md:pl-4   w-full md:w-[33.33333333333333%]  text-ashText">
-            <Chart />
+          <div className="md:pl-4   w-full md:w-[33.33333333333333%]  text-ashText ">
+            <div className="mt-[25px] md:mt-0 lg:mt-0">
+              <Chart />
+            </div>
           </div>
         </div>
       </div>

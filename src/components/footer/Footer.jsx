@@ -35,11 +35,11 @@ const Footer = () => {
           <div className="md:flex  w-[100%]">
             <div className="w-full h-full md:w-[30%] xs:mb-{[]} sm:mb-5 md:mb-0">
               <img
-                src="https://i.postimg.cc/MHxR5xzc/MINDCH-09-01.png"
+                src="https://i.postimg.cc/50qPhwnt/Mask-group.png"
                 className={
                   !signInShow
-                    ? "w-[120px] h-auto mb-1"
-                    : "w-[150px] h-auto mb-1"
+                    ? "w-[150px] h-auto mb-1"
+                    : "w-[190px] h-auto mb-1"
                 }
               />
               <div className="mb-4">
