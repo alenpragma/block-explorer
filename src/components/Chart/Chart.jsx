@@ -4,14 +4,14 @@ import { Line } from "recharts";
 import { LineChart, XAxis } from "recharts";
 import "./Chart.css";
 const data = [
-  { name: "Mar 20", Transaction: 400 },
-  { name: "Mar 20", Transaction: 1000 },
-  { name: "Mar 20", Transaction: 48 },
-  { name: "Mar 20", Transaction: 0 },
-  { name: "Mar 20", Transaction: 400 },
-  { name: "Mar 20", Transaction: 1000 },
-  { name: "Mar 20", Transaction: 48 },
-  { name: "Mar 20", Transaction: 0 },
+  { name: "Mar 21", Transaction: 400 },
+  { name: "Mar 22", Transaction: 1000 },
+  { name: "Mar 23", Transaction: 48 },
+  { name: "Mar 24", Transaction: 0 },
+  { name: "Mar 25", Transaction: 400 },
+  { name: "Mar 26", Transaction: 1000 },
+  { name: "Mar 27", Transaction: 20 },
+  { name: "Mar 28", Transaction: 0 },
 ];
 const Chart = () => {
   return (

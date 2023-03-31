@@ -35,7 +35,7 @@ const Footer = () => {
           <div className="md:flex  w-[100%]">
             <div className="w-full h-full md:w-[30%] xs:mb-{[]} sm:mb-5 md:mb-0">
               <img
-                src="https://i.postimg.cc/VN3qymVC/Untitled-1-01.png"
+                src="https://i.postimg.cc/MHxR5xzc/MINDCH-09-01.png"
                 className={
                   !signInShow
                     ? "w-[120px] h-auto mb-1"
