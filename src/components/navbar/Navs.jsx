@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
@@ -10,11 +10,13 @@ import { HiOutlineMenuAlt3 } from "react-icons/hi";
 import { FaTimesCircle } from "react-icons/fa";
 import { BiLogInCircle } from "react-icons/bi";
 import "./navbar.css";
+import { useSelector } from "react-redux";
 
 const Navs = () => {
   const [show, setShow] = useState(false);
   const [click, setClick] = useState(false);
   const [signInShow, setSignInShow] = useState(false);
+  let themeData = useSelector((state) => state.theme);
 
   const handleDropdown = (index) => setShow(index);
   const handleClick = () => setClick(!click);
@@ -29,19 +31,24 @@ const Navs = () => {
 
   return (
     <Navbar
-      className="bg-white dark:!bg-blackBg shadow-lg  dark:!text-white"
+      className="bg-white dark:!bg-blackBg shadow-lg navs  dark:!text-white"
       expand="lg"
     >
+      {console.log("fsdhjukg", themeData.themeState)}
       <Container>
         <Navbar.Brand href="/">
           <img
-            src="https://i.postimg.cc/SN5XpHXn/MINDCH-45-01-1.png"
+            src={
+              themeData.themeState === "true"
+                ? "https://i.postimg.cc/SN5XpHXn/MINDCH-45-01-1.png"
+                : "https://i.postimg.cc/50qPhwnt/Mask-group.png"
+            }
             className={!signInShow ? "w-[150px] h-auto" : "w-[190px] h-auto "}
           />
         </Navbar.Brand>
         {!signInShow && (
           <Nav.Link
-            as={Link}
+            as={NavLink}
             to={"/signin"}
             // key={index}
           >
@@ -73,7 +80,7 @@ const Navs = () => {
             {navdata.map((item, index) =>
               item.name === "Home" ? (
                 <Nav.Link
-                  as={Link}
+                  as={NavLink}
                   to={item.link}
                   key={index}
                   className="group dark:!text-white text-black"
@@ -105,7 +112,7 @@ const Navs = () => {
                 >
                   {item.dropdownItems.map((dropdownItem, dropdownIndex) => (
                     <NavDropdown.Item
-                      as={Link}
+                      as={NavLink}
                       to={dropdownItem.link}
                       key={dropdownIndex}
                       className="hover:!text-primaryColor dark:hover:!bg-primaryHover hover:!bg-primaryHover dark:bg-blackBg dark:text-white"
@@ -119,13 +126,15 @@ const Navs = () => {
             {/* signup button start */}
             {signInShow && (
               <Nav.Link
-                as={Link}
-                to={"/signin"}
+                as={NavLink}
+                to={"signin"}
                 // key={index}
               >
                 <div className="group !text-black flex items-center gap-x-2 dark:!text-white border-l pl-5">
                   <BiLogInCircle className="text-[18px] group-hover:text-primaryColor " />
-                  <span className="group-hover:text-primaryColor">Sign In</span>
+                  <span className="group-hover:text-primaryColor signin">
+                    Sign In
+                  </span>
                 </div>
               </Nav.Link>
             )}

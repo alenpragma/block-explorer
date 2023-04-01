@@ -38,7 +38,7 @@ const BlockDetails = () => {
     <>
       <div className="container ">
         <div className="w-full relative  mb-9 mt-[-20px] shadow-xl md:rounded-tr-md rounded-b-md px-3 bg-white dark:!bg-liteBlack">
-          <div className="p-3 h-[60px] flex justify-between items-center w-full md:w-[50%] absolute top-[-60px] rounded-t-md left-0 z-3 border-b dark:text-white text-liteBlack  bg-white dark:!bg-liteBlack">
+          <div className="p-3 h-[60px] flex text-[12px] md-text-base justify-between items-center w-full md:w-[50%] absolute top-[-60px] rounded-t-md left-0 z-3 border-b dark:text-white text-liteBlack  bg-white dark:!bg-liteBlack">
             <div className="flex items-center gap-x-2">
               <h5 className="font-normal m-0 ">Block</h5>{" "}
               <span className="text-ashText">

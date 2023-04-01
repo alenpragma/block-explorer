@@ -15,3 +15,12 @@
 .navbar-toggler:focus {
   box-shadow: none !important;
 }
+.navs .active {
+  color: #079ce0 !important;
+}
+.navs .active svg {
+  color: #079ce0 !important;
+}
+.navs .active .signin {
+  color: #079ce0 !important;
+}
