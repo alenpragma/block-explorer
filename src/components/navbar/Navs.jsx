@@ -28,7 +28,10 @@ const Navs = () => {
   }, []);
 
   return (
-    <Navbar className="dark:!bg-blackBg dark:!text-white" expand="lg">
+    <Navbar
+      className="bg-white dark:!bg-blackBg shadow-lg  dark:!text-white"
+      expand="lg"
+    >
       <Container>
         <Navbar.Brand href="/">
           <img

@@ -35,3 +35,23 @@ button {
 ::-webkit-scrollbar-thumb:hover {
   display: none;
 }
+
+/* nav sroll functionality */
+#nav-wrapper {
+  transition: 1.5s;
+  -webkit-transition: 1s;
+  -moz-transition: 1.5s;
+  -ms-transition: 1.5s;
+  -o-transition: 1.5s;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 999999999999999999;
+}
+
+.up {
+  position: fixed !important;
+  width: 100%;
+  top: -200px !important;
+  z-index: 999999999999;
+}
