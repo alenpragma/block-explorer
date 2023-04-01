@@ -9,12 +9,13 @@ import "./searchbar.css";
 
 const SearchBar = () => {
   return (
-    <div className="!w-full search-bar">
+    <div className="!w-full search-bar relative z-[99999999999]">
       <InputGroup className="!w-full  !rounded-0">
         <DropdownButton
           variant="outline-secondary"
           title="All Filters"
           id="input-group-dropdown-1"
+          className="relative !z-[999]"
         >
           <Dropdown.Item
             className="hover:!text-primary dark:hover:!bg-primaryHover hover:!bg-primaryHover dark:bg-blackBg dark:!text-white"

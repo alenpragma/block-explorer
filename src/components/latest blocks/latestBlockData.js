@@ -1,6 +1,6 @@
 export let latestBlocks = [
   {
-    code: "2fds281620",
+    code: "2345186",
     minsAgo: "26 mins ago",
     ValidatedBy: "Mining Pool 4",
     txns: "3",
@@ -8,7 +8,7 @@ export let latestBlocks = [
     link: "/",
   },
   {
-    code: "228541620",
+    code: "2345187",
     minsAgo: "26 mins ago",
     ValidatedBy: "Mining Pool 4",
     txns: "3",
@@ -16,7 +16,7 @@ export let latestBlocks = [
     link: "/",
   },
   {
-    code: "228541f620",
+    code: "2345188",
     minsAgo: "26 mins ago",
     ValidatedBy: "Mining Pool 4",
     txns: "3",
@@ -24,7 +24,7 @@ export let latestBlocks = [
     link: "/",
   },
   {
-    code: "22816320",
+    code: "2345189",
     minsAgo: "26 mins ago",
     ValidatedBy: "Mining Pool 4",
     txns: "3",
@@ -32,16 +32,7 @@ export let latestBlocks = [
     link: "/",
   },
   {
-    code: "2281626530",
-    minsAgo: "26 mins ago",
-    ValidatedBy: "Mining Pool 4",
-    txns: "3",
-    mind: "3.0079",
-    link: "/",
-  },
-
-  {
-    code: "22355381620",
+    code: "2345190",
     minsAgo: "26 mins ago",
     ValidatedBy: "Mining Pool 4",
     txns: "3",
@@ -49,7 +40,7 @@ export let latestBlocks = [
     link: "/",
   },
   {
-    code: "535535335",
+    code: "2345191",
     minsAgo: "26 mins ago",
     ValidatedBy: "Mining Pool 4",
     txns: "3",
@@ -57,7 +48,7 @@ export let latestBlocks = [
     link: "/",
   },
   {
-    code: "22816253360",
+    code: "2345192",
     minsAgo: "26 mins ago",
     ValidatedBy: "Mining Pool 4",
     txns: "3",
@@ -65,7 +56,7 @@ export let latestBlocks = [
     link: "/",
   },
   {
-    code: "228166420",
+    code: "2345193",
     minsAgo: "26 mins ago",
     ValidatedBy: "Mining Pool 4",
     txns: "3",
@@ -73,7 +64,7 @@ export let latestBlocks = [
     link: "/",
   },
   {
-    code: "228646471620",
+    code: "2345194",
     minsAgo: "26 mins ago",
     ValidatedBy: "Mining Pool 4",
     txns: "3",
@@ -81,7 +72,7 @@ export let latestBlocks = [
     link: "/",
   },
   {
-    code: "2284671620",
+    code: "2345195",
     minsAgo: "26 mins ago",
     ValidatedBy: "Mining Pool 4",
     txns: "3",
@@ -89,7 +80,7 @@ export let latestBlocks = [
     link: "/",
   },
   {
-    code: "22817575620",
+    code: "2345196",
     minsAgo: "26 mins ago",
     ValidatedBy: "Mining Pool 4",
     txns: "3",
@@ -97,7 +88,7 @@ export let latestBlocks = [
     link: "/",
   },
   {
-    code: "2287531620",
+    code: "2345197",
     minsAgo: "26 mins ago",
     ValidatedBy: "Mining Pool 4",
     txns: "3",
@@ -105,56 +96,7 @@ export let latestBlocks = [
     link: "/",
   },
   {
-    code: "26464281620",
-    minsAgo: "26 mins ago",
-    ValidatedBy: "Mining Pool 4",
-    txns: "3",
-    mind: "3.0079",
-    link: "/",
-  },
-
-  {
-    code: "22817486620",
-    minsAgo: "26 mins ago",
-    ValidatedBy: "Mining Pool 4",
-    txns: "3",
-    mind: "3.0079",
-    link: "/",
-  },
-  {
-    code: "22846451620",
-    minsAgo: "26 mins ago",
-    ValidatedBy: "Mining Pool 4",
-    txns: "3",
-    mind: "3.0079",
-    link: "/",
-  },
-  {
-    code: "22816535320",
-    minsAgo: "26 mins ago",
-    ValidatedBy: "Mining Pool 4",
-    txns: "3",
-    mind: "3.0079",
-    link: "/",
-  },
-  {
-    code: "22815346620",
-    minsAgo: "26 mins ago",
-    ValidatedBy: "Mining Pool 4",
-    txns: "3",
-    mind: "3.0079",
-    link: "/",
-  },
-  {
-    code: "2286471620",
-    minsAgo: "26 mins ago",
-    ValidatedBy: "Mining Pool 4",
-    txns: "3",
-    mind: "3.0079",
-    link: "/",
-  },
-  {
-    code: "2264323481620",
+    code: "2345198",
     minsAgo: "26 mins ago",
     ValidatedBy: "Mining Pool 4",
     txns: "3",

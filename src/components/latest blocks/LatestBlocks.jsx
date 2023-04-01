@@ -23,7 +23,7 @@ const LatestBlocks = () => {
                   Bk
                 </div>
                 <div>
-                  <Link className="text-primaryColor" to={block.link}>
+                  <Link className="text-primaryColor" to="blocks">
                     {block.code}
                   </Link>
                   <br />

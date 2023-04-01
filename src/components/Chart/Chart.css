@@ -10,3 +10,9 @@
 .recharts-layer line {
   stroke: none !important;
 }
+.recharts-text {
+  fill: black !important;
+}
+.dark .recharts-text {
+  fill: #fff !important;
+}
