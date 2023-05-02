@@ -180,11 +180,11 @@ const BlockDetails = () => {
                 <AiOutlineQuestionCircle className="text-[18px]" /> Extra Data:
               </div>
               <div className="w-[100%] md:w-[80%] flex gap-x-2 items-center  text-liteBlack dark:text-white mt-[10px] md:mt-0">
-                <textarea className="w-full h-[150px]" disabled>
-                  Hex:
+                <textarea defaultValue="   Hex:
                   0xd883010001846765746888676f312e31382e36856c696e75780000007f90ce5d54bc7d304117737757e7e3bdefd17cbd990122659cdfa6e6ed6c5b23743ba5172c443be5410960dc518541f00625a1adf39fba47321088f11b59ca1bda3d11cd00
                   ExtraVanity: Øgethgo1.18.6linuxÎ] SignedData:
-                  0x54bc7d304117737757e7e3bdefd17cbd990122659cdfa6e6ed6c5b23743ba5172c443be5410960dc518541f00625a1adf39fba47321088f11b59ca1bda3d11cd00
+                  0x54bc7d304117737757e7e3bdefd17cbd990122659cdfa6e6ed6c5b23743ba5172c443be5410960dc518541f00625a1adf39fba47321088f11b59ca1bda3d11cd00" className="w-full h-[150px]" disabled>
+               
                 </textarea>
               </div>
             </li>
