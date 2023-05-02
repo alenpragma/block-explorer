@@ -13,7 +13,7 @@ const Home = () => {
           <LatestBlocks />
         </div>
         <div className="w-full md:w-[50%]">
-          {/* <LatestTransaction /> */}
+          <LatestTransaction />
         </div>
       </div>
     </div>
