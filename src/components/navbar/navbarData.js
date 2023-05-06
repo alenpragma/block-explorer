@@ -1,19 +1,19 @@
 export const navdata = [
   { name: "Home", link: "/" },
-  {
-    name: "Blockchain",
-    dropdownItems: [
-      { name: "Top Accounts", link: "/top-accounts" },
-      { name: "View Txns", link: "/view-txs" },
-      { name: "View Pending Txns", link: "/view-pending-txs" },
-      {
-        name: "View Contract Internal Txns",
-        link: "/view-contract-txs",
-      },
-      { name: "View Blocks", link: "/view-blocks" },
-      { name: "Verified Contracts", link: "/verified-contracts" },
-    ],
-  },
+  // {
+  //   name: "Blockchain",
+  //   dropdownItems: [
+  //     { name: "Top Accounts", link: "/top-accounts" },
+  //     { name: "View Txns", link: "/view-txs" },
+  //     { name: "View Pending Txns", link: "/view-pending-txs" },
+  //     {
+  //       name: "View Contract Internal Txns",
+  //       link: "/view-contract-txs",
+  //     },
+  //     { name: "View Blocks", link: "/view-blocks" },
+  //     { name: "Verified Contracts", link: "/verified-contracts" },
+  //   ],
+  // },
   {
     name: "Validators",
     dropdownItems: [
