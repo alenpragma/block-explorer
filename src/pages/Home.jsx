@@ -1,7 +1,7 @@
 import React from "react";
 import HomeChartBar from "../components/homeChartBar.jsx/HomeChartBar";
 import LatestBlocks from "../components/latest blocks/LatestBlocks";
-// import LatestTransaction from "../components/latest transactions/LatestTransaction";
+import LatestTransaction from "../components/latest transactions/LatestTransaction";
 
 const Home = () => {
   return (
@@ -13,7 +13,7 @@ const Home = () => {
           <LatestBlocks />
         </div>
         <div className="w-full md:w-[50%]">
-          {/* <LatestTransaction /> */}
+          <LatestTransaction />
         </div>
       </div>
     </div>
