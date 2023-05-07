@@ -37,14 +37,14 @@ const Navs = () => {
       {console.log("fsdhjukg", themeData.themeState)}
       <Container>
         <Navbar.Brand href="/">
-          {/* <img
+          <img
             src={
               themeData.themeState === "true"
                 ? "https://i.postimg.cc/SN5XpHXn/MINDCH-45-01-1.png"
                 : "https://i.postimg.cc/50qPhwnt/Mask-group.png"
             }
             className={!signInShow ? "w-[150px] h-auto" : "w-[190px] h-auto "}
-          /> */}
+          />
         </Navbar.Brand>
         {!signInShow && (
           <Nav.Link
