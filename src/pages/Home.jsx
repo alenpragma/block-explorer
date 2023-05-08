@@ -4,6 +4,7 @@ import LatestBlocks from "../components/latest blocks/LatestBlocks";
 import LatestTransaction from "../components/latest transactions/LatestTransaction";
 
 const Home = () => {
+  
   return (
     <div>
       <HomeChartBar />
