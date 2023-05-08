@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { HiCurrencyDollar } from "react-icons/hi";
 import { BsGraphUpArrow } from "react-icons/bs";
 import { SiHiveBlockchain } from "react-icons/si";
@@ -6,7 +6,63 @@ import { FaUserCircle } from "react-icons/fa";
 import { Doughnut } from "react-chartjs-2";
 import Chart from "../Chart/Chart";
 
+import { provider } from "./rpc";
+
 const HomeChartBar = () => {
+  const BLOCK_TIME = 3;
+  const MIND = "0x05C10A9fde936B244900A9d394E3aa6341D4C6c5";
+  // const MIND = '0x0000000000000000000000000000000000000000';
+  const [latestBlock, setLatestBlock] = useState(null);
+  const [transactionCount, setTransactionCount] = useState(0);
+  const [totalSupply, setTotalSupply] = useState(0);
+  const [peerCount, setPeerCount] = useState(0);
+
+  useEffect(() => {
+    const getLatestBlock = async () => {
+      try {
+        const LOCAL_STORAGE_KEY = "unicornxx";
+        const blockNumber = await provider.eth.getBlockNumber();
+        const block = await provider.eth.getBlock(blockNumber);
+        const oldData =
+          JSON.parse(localStorage.getItem(LOCAL_STORAGE_KEY)) || [];
+        const newTransactions = block.transactions;
+        const allTransactions = [...oldData, ...newTransactions];
+        localStorage.setItem(
+          LOCAL_STORAGE_KEY,
+          JSON.stringify(allTransactions)
+        );
+        setTransactionCount(allTransactions.length);
+        setLatestBlock(block);
+
+        const supply = await provider.eth.getBalance(MIND);
+        setTotalSupply(supply / 10 ** 18);
+      } catch (error) {
+        console.error(error);
+      }
+    };
+
+    getLatestBlock();
+
+    const interval = setInterval(() => {
+      getLatestBlock();
+    }, BLOCK_TIME * 1000);
+
+    const fetchPeerCount = async () => {
+      const count = await provider.eth.net.getPeerCount();
+      setPeerCount(count);
+    };
+
+    fetchPeerCount();
+
+    const peerCountInterval = setInterval(() => {
+      fetchPeerCount();
+    }, 300000);
+  }, []);
+
+  if (!latestBlock) {
+    return null;
+  }
+
   return (
     <>
       <div className="container">
@@ -33,9 +89,9 @@ const HomeChartBar = () => {
                   </p>
                   <p className="m-0 uppercase text-ashText">
                     <span className="text-blackBg dark:text-white">
-                      $150,212,317.71/76,638,938
+                      {totalSupply}
                     </span>{" "}
-                    core
+                    MIND
                   </p>
                 </div>
               </div>
@@ -56,10 +112,10 @@ const HomeChartBar = () => {
                   </div>
                   <div className="flex">
                     <p className="m-0 upperca  w-[50%] text-blackBg dark:text-white">
-                      $1.9
+                      {latestBlock.number}
                     </p>
                     <p className="m-0 uppercase  w-[50%] text-blackBg dark:text-white text-end">
-                      $1.9
+                      {transactionCount}
                     </p>
                   </div>
                 </div>
@@ -73,7 +129,7 @@ const HomeChartBar = () => {
                     active validators
                   </p>
                   <p className="m-0 uppercase text-blackBg dark:text-white">
-                    21
+                    {peerCount}
                   </p>
                 </div>
               </div>
