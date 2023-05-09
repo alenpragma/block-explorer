@@ -74,13 +74,7 @@ import { provider } from "./rpc";
         }
       };
   
-    //  const interval = setInterval(() => {
-       // fetchLatestBlockData();
-//     }, 12000);
-  
-     // return () => clearInterval(interval);
-//    }, [latestBlockNumber, blocks]);
-    
+
 
   const interval = setInterval(() => {
     fetchLatestBlockData();
@@ -100,10 +94,10 @@ import { provider } from "./rpc";
         </div>
 
         <div className="h-[400px] overflow-y-scroll px-2">
-        {blocks.map((block) => (
+        {blocks.map((block, i ) => (
             <div
               className="py-3 flex flex-col md:flex-row gap-y-3 md:gap-y-0 border-b !border-ashText"
-              key={block.number}
+              key={/*block.number**/ i}
             >
               <div className="md:w-[25%] flex items-center">
                 <div className="mr-2 w-[50px] h-[50px] rounded-md shadow-md flex items-center justify-center text-primaryColor font-semibold">
@@ -121,7 +115,7 @@ import { provider } from "./rpc";
                 <div className="text-ashText">
                   Validated By{" "}
                   <span className="text-primaryColor">
-                    Validator:<span> {block.miner}</span>
+                    Validator:<span> {block.miner.slice(0, 10)}...</span>
                   </span>{" "}
                   <br />
                   <span className="text-primaryColor">
