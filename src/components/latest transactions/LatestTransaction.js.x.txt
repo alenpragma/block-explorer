@@ -1,0 +1,112 @@
+import { Button } from "@mui/material";
+import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
+//import { nanoid } from "nanoid";
+
+//import "./latestTrans.css";
+//import { LatestTrans } from "./LatestTransData";
+import { provider } from "./rpc";
+import { CgFileDocument } from "react-icons/cg";
+
+
+const LatestTransactions = () => {
+    const [txns, setTxns] = useState([]);
+  
+    useEffect(() => {
+      const subscription = provider.eth.subscribe("pendingTransactions", (error, result) => {
+        if (!error) {
+          const txn = provider.eth.getTransaction(result);
+          const from = txn.from;
+          const to = txn.to;
+          const value = provider.utils.fromWei(txn.value, "ether");
+          const blockNumber = txn.blockNumber;
+          const txnData = { from, to, value, blockNumber };
+  
+          const txnExists = txns.some(
+            (txn) =>
+              txn.from === txnData.from &&
+              txn.to === txnData.to &&
+              txn.value === txnData.value &&
+              txn.blockNumber === txnData.blockNumber
+          );
+          if (!txnExists) {
+            if (txns.length === 5) {
+              setTxns((prevTxns) => prevTxns.slice(0, -1));
+            }
+            setTxns((prevTxns) => [...prevTxns, txnData]);
+          }
+        }
+      });
+  
+      return () => subscription.unsubscribe();
+    }, [txns]);
+  
+  return (
+    <>
+      <div className="w-full mt-6 md:mt-0 rounded-md shadow-lg ">
+        <div className="p-3 border-b !border-ashText">
+          <h6 className="text-blackBg dark:text-white m-0">
+            Latest Transactions
+          </h6>
+        </div>
+
+        <div className="h-[400px] overflow-y-scroll px-2">
+        {txns.map((txn, index) => (
+             <div
+             className="py-3 flex flex-col md:flex-row gap-y-3 md:gap-y-0 border-b !border-ashText"
+             
+             key={index}
+           >
+             <div className="md:w-[25%] flex items-center">
+               <div className="mr-2 w-[50px] h-[50px] rounded-md shadow-md flex items-center justify-center text-primaryColor font-semibold">
+                 Tx
+               </div>
+               <div>
+                 <Link className="text-primaryColor" to={console.log("in")}>
+               {txn.blockNumber}
+                 </Link>
+                 <br />
+                 <small className="text-ashText ">{console.log("in")}</small>
+               </div>
+             </div>
+             <div className="md:w-[50%] flex justify-center items-center">
+               <div className="text-ashText">
+                 From{" "}
+                 <span className="text-primaryColor">
+                 {txn.from.slice(0, 10)}...
+                 </span>{" "}
+                 <br />
+                 <div className="flex items-center gap-x-1">
+                   To{" "}
+                   <Link className="text-ashText" to={console.log("in")}>
+                     <CgFileDocument />
+                   </Link>
+                   <span className="text-primaryColor">
+                   {txn.to.slice(0, 10)}...
+                   </span>{" "}
+                 </div>
+               </div>
+             </div>
+             <div className="md:w-[25%] flex items-center justify-end">
+               <div className="list-polygon bg-primaryHover   uppercase pl-5 pr-3 pb-1 pt-1 text-[12px] font-semibold text-primaryColor">
+                 <span>{txn.to}</span> MIND
+               </div>
+             </div>
+           </div>
+         ))}
+       </div>
+
+       <div className="p-3 border-t border-ashText">
+         <Button
+           className="!mt-[-4px] !capitalize !bg-primaryColor w-full"
+           variant="contained"
+         >
+           View All Blocks
+         </Button>
+       </div>
+     </div>
+   </>
+ );
+};
+    
+export default LatestTransactions;  
