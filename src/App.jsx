@@ -11,6 +11,7 @@ import RootLayout from "./components/RootLayout";
 import { useSelector } from "react-redux";
 import BlockDetails from "./pages/BlockDetails";
 import Signin from "./pages/Signin";
+import TnxDetaile from "./pages/TnxDetaile";
 
 let router = createBrowserRouter(
   createRoutesFromElements(
@@ -18,6 +19,7 @@ let router = createBrowserRouter(
       <Route path="/signin" element={<Signin />}></Route>
       <Route index element={<Home />}></Route>
       <Route path="blocks" element={<BlockDetails />}></Route>
+      <Route path="transactionDetails" element={<TnxDetaile/>}></Route>
     </Route>
   )
 );

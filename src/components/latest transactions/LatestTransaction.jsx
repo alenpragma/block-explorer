@@ -63,11 +63,11 @@ const LatestTransaction = () => {
                   Tx
                 </div>
                 <div>
-                  <Link className="text-primaryColor">
+                  <Link className="text-primaryColor" to="transactionDetails">
                   {txn.blockNumber}
                   </Link>
                   <br />
-                  <small className="text-ashText "></small>
+                  <small className="text-ashText ">Time here</small>
                 </div>
               </div>
               <div className="md:w-[50%] flex justify-center items-center">
