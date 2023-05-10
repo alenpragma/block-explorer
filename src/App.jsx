@@ -18,8 +18,8 @@ let router = createBrowserRouter(
     <Route path="/" element={<RootLayout />}>
       <Route path="/signin" element={<Signin />}></Route>
       <Route index element={<Home />}></Route>
-      <Route path="blocks" element={<BlockDetails />}></Route>
-      <Route path="transactionDetails" element={<TnxDetaile/>}></Route>
+      <Route path="/blocks" element={<BlockDetails />}></Route>
+      <Route path="/transactionDetails" element={<TnxDetaile/>}></Route>
     </Route>
   )
 );
