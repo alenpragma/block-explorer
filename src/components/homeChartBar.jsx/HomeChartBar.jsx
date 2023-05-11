@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect, useRef } from "react";
 import { HiCurrencyDollar } from "react-icons/hi";
 import { BsGraphUpArrow } from "react-icons/bs";
@@ -5,8 +6,10 @@ import { SiHiveBlockchain } from "react-icons/si";
 import { FaUserCircle } from "react-icons/fa";
 import { Doughnut } from "react-chartjs-2";
 import Chart from "../Chart/Chart";
+import {mindCoinPrice} from "./price-api"
 
 import { provider } from "./rpc";
+
 
 const HomeChartBar = () => {
   const BLOCK_TIME = 3;
@@ -74,8 +77,8 @@ const HomeChartBar = () => {
                 <div>
                   <p className="uppercase text-ashText m-0">mindchain price</p>
                   <p className="m-0 uppercase text-ashText">
-                    <span className="text-blackBg dark:text-white">$1.96</span>{" "}
-                    @ 0.0000006918 btc
+                    <span className="text-blackBg dark:text-white">{mindCoinPrice.slice(0, 6)}</span>{" "}
+                    USD
                   </p>
                 </div>
               </div>
