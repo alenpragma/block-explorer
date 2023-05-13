@@ -77,7 +77,7 @@ const HomeChartBar = () => {
                 <div>
                   <p className="uppercase text-ashText m-0">mindchain price</p>
                   <p className="m-0 uppercase text-ashText">
-                    <span className="text-blackBg dark:text-white">{mindCoinPrice.slice(0, 6)}</span>{" "}
+                    <span className="text-blackBg dark:text-white">{mindCoinPrice && mindCoinPrice.slice(0, 6)}</span>{" "}
                     USD
                   </p>
                 </div>

@@ -115,7 +115,7 @@ import { provider } from "./rpc";
                 <div className="text-ashText">
                   Validated By{" "}
                   <span className="text-primaryColor">
-                    Validator:<span> {block.miner.slice(0, 10)}...</span>
+                    Validator:<span> {block && block.miner.slice(0, 10)}...</span>
                   </span>{" "}
                   <br />
                   <span className="text-primaryColor">

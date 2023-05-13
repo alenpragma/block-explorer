@@ -74,7 +74,7 @@ const LatestTransaction = () => {
                 <div className="text-ashText">
                   From{" "}
                   <span className="text-primaryColor">
-                  {txn.from.slice(0, 10)}...
+                  {txn && txn.from.slice(0, 10)}...
                   </span>{" "}
                   <br />
                   <div className="flex items-center gap-x-1">
@@ -83,14 +83,14 @@ const LatestTransaction = () => {
                       <CgFileDocument />
                     </Link>
                     <span className="text-primaryColor">
-                    {txn.to.slice(0, 10)}...
+                    {txn && txn.to.slice(0, 10)}...
                     </span>{" "}
                   </div>
                 </div>
               </div>
               <div className="md:w-[25%] flex items-center justify-end">
                 <div className="list-polygon bg-primaryHover   uppercase pl-5 pr-3 pb-1 pt-1 text-[12px] font-semibold text-primaryColor">
-                  <span>{provider.utils.fromWei(new BigNumber(txn.value).times(new BigNumber(10).pow(18)).toString(), "ether")}</span> MIND
+                  <span>{ provider && provider.utils.fromWei(new BigNumber(txn.value).times(new BigNumber(10).pow(18)).toString(), "ether")}</span> MIND
                 </div>
               </div>
             </div>
