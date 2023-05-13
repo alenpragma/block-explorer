@@ -238,7 +238,7 @@ const BlockDetails = () => {
                 </li>
               </>
             )}
-            <li className="py-2 border-b md:flex items-center">
+            <li className="py-2  md:flex items-center">
               <Button
                 className=" !capitalize !bg-primaryColor w-full"
                 variant="contained"
