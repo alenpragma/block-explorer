@@ -78,7 +78,9 @@ const TnxDetaile = () => {
               Logs
             </Button>
           </div>
-          <ul className="p-0 m-0">
+          {
+            overView && (
+              <ul className="p-0 m-0">
             <li className="py-2 border-b md:flex items-center">
               <div className="w-[50%] md:w-[20%] text-ashText flex  items-center gap-x-1">
                 <AiOutlineQuestionCircle className="text-[18px]" /> Transaction
@@ -166,7 +168,7 @@ const TnxDetaile = () => {
                 <span>0.022541922 CORE ($0.02)</span>
               </div>
             </li>
-            <li className="py-2 border-b flex items-center">
+            <li className="py-2  flex items-center">
               <div className="w-[50%] md:w-[20%] text-ashText flex  items-center gap-x-1">
                 <AiOutlineQuestionCircle className="text-[18px]" />
                 Transaction Fee:
@@ -175,100 +177,115 @@ const TnxDetaile = () => {
                 <span>0 CORE ( $0)</span>
               </div>
             </li>
-            <li className="py-2 border-b flex items-center">
-              <div className="w-[50%] md:w-[20%] text-ashText flex  items-center gap-x-1">
-                <AiOutlineQuestionCircle className="text-[18px]" />
-                Gas Limit:
-              </div>
-              <div className="w-[50%] md:w-[80%] flex gap-x-2 items-center  text-liteBlack dark:text-white">
-                <span>fdgsdfgsfdgfd</span>
-              </div>
-            </li>
-            <li className="py-2 border-b md:flex items-center">
-              <div className="w-[50%] md:w-[20%] text-ashText flex  items-center gap-x-1">
-                <AiOutlineQuestionCircle className="text-[18px]" /> Extra Data:
-              </div>
-              <div className="w-[100%] md:w-[80%] flex gap-x-2 items-center  text-liteBlack dark:text-white mt-[10px] md:mt-0">
-                <textarea
-                  defaultValue="   Hex:
-                  0xd883010001846765746888676f312e31382e36856c696e75780000007f90ce5d54bc7d304117737757e7e3bdefd17cbd990122659cdfa6e6ed6c5b23743ba5172c443be5410960dc518541f00625a1adf39fba47321088f11b59ca1bda3d11cd00
-                  ExtraVanity: Øgethgo1.18.6linuxÎ] SignedData:
-                  0x54bc7d304117737757e7e3bdefd17cbd990122659cdfa6e6ed6c5b23743ba5172c443be5410960dc518541f00625a1adf39fba47321088f11b59ca1bda3d11cd00"
-                  className="w-full h-[150px]"
-                  disabled
-                ></textarea>
-              </div>
-            </li>
+
             {seeMore && (
               <>
-                <li className="py-2 border-b md:flex items-center overflow-hidden">
-                  <div className="w-[50%] md:w-[20%] text-ashText flex  items-center gap-x-1">
-                    <AiOutlineQuestionCircle className="text-[18px]" /> Hash:
-                  </div>
-                  <div className="w-[100%] md:w-[80%] md:flex gap-x-2 items-center  text-liteBlack dark:text-white mt-[10px] md:mt-0">
-                    0x71f5eaf4b0f0a3329fa795d294ce7cb48f19b920ab54e2845c3771683fe617fd
-                  </div>
-                </li>
-                <li className="py-2 border-b md:flex items-center overflow-hidden">
-                  <div className="w-[50%] md:w-[20%] text-ashText flex  items-center gap-x-1">
-                    <AiOutlineQuestionCircle className="text-[18px]" />{" "}
-                    Validated by:
-                  </div>
-                  <div className="w-[100%] md:w-[80%] md:flex gap-x-2 items-center  text-liteBlack dark:text-white mt-[10px] md:mt-0">
-                    <Link className="text-primaryColor">
-                      0x9eb404b4edfe6d8856d20ee84dca834800331960d941fc64c9c0fd79ad88c681
-                    </Link>
-                  </div>
-                </li>
-                <li className="py-2 border-b md:flex items-center overflow-hidden">
-                  <div className="w-[50%] md:w-[20%] text-ashText flex  items-center gap-x-1">
-                    <AiOutlineQuestionCircle className="text-[18px]" />{" "}
-                    Sha3Uncles:
-                  </div>
-                  <div className="w-[100%] md:w-[80%] md:flex gap-x-2 items-center  text-liteBlack dark:text-white mt-[10px] md:mt-0">
-                    0x1dcc4de8dec75d7aab85b567b6ccd41ad312451b948a7413f0a142fd40d49347
-                  </div>
-                </li>
-                <li className="py-2 border-b md:flex items-center overflow-hidden">
-                  <div className="w-[50%] md:w-[20%] text-ashText flex  items-center gap-x-1">
-                    <AiOutlineQuestionCircle className="text-[18px]" />{" "}
-                    StateRoot:
-                  </div>
-                  <div className="w-[100%] md:w-[80%] md:flex gap-x-2 items-center  text-liteBlack dark:text-white mt-[10px] md:mt-0">
-                    0xf452380a2428c4d686231c914c7495f3cfd8fe4fdcfc41d89cb038fce1753067
-                  </div>
-                </li>
                 <li className="py-2 border-b flex items-center">
                   <div className="w-[50%] md:w-[20%] text-ashText flex  items-center gap-x-1">
-                    <AiOutlineQuestionCircle className="text-[18px]" /> Block
-                    Nonce:
+                    <AiOutlineQuestionCircle className="text-[18px]" />
+                    Gas Limit:
                   </div>
-                  <div className="w-[50%] md:w-[80%] flex gap-x-2 items-center font-semibold text-liteBlack dark:text-white">
-                    0
+                  <div className="w-[50%] md:w-[80%] flex gap-x-2 items-center  text-liteBlack dark:text-white">
+                    <span>fdgsdfgsfdgfd</span>
+                  </div>
+                </li>
+
+                <li className="py-2 border-b md:flex items-center overflow-hidden">
+                  <div className="w-[50%] md:w-[20%] text-ashText flex  items-center gap-x-1">
+                    <AiOutlineQuestionCircle className="text-[18px]" /> Gas Used
+                    by Transaction:
+                  </div>
+                  <div className="w-[100%] md:w-[80%] md:flex gap-x-2 items-center  text-liteBlack dark:text-white mt-[10px] md:mt-0">
+                    <Link className="text-primaryColor">19,007 (3.8%)</Link>
+                  </div>
+                </li>
+                <li className="py-2 border-b md:flex items-center overflow-hidden">
+                  <div className="w-[50%] md:w-[20%] text-ashText flex  items-center gap-x-1">
+                    <AiOutlineQuestionCircle className="text-[18px]" /> Gas
+                    Price:
+                  </div>
+                  <div className="w-[100%] md:w-[80%] md:flex gap-x-2 items-center  text-liteBlack dark:text-white mt-[10px] md:mt-0">
+                    0 Mind (0GWei)
+                  </div>
+                </li>
+                <li className="py-2 border-b md:flex items-center overflow-hidden">
+                  <div className="w-[50%] md:w-[20%] text-ashText flex  items-center gap-x-1">
+                    <AiOutlineQuestionCircle className="text-[18px]" /> Nonce{" "}
+                    <span className="p-1 bg-primaryHover rounded-md">
+                      Position
+                    </span>
+                  </div>
+                  <div className="w-[100%] md:w-[80%] md:flex gap-x-2 items-center  text-liteBlack dark:text-white mt-[10px] md:mt-0">
+                    138754{" "}
+                    <span className="p-1 bg-primaryHover rounded-md">7</span>
+                  </div>
+                </li>
+
+                <li className="py-2  md:flex items-center">
+                  <div className="w-[50%] md:w-[20%] text-ashText flex  items-center gap-x-1">
+                    <AiOutlineQuestionCircle className="text-[18px]" />
+                    Input Data:
+                  </div>
+                  <div className="w-[100%] md:w-[80%] flex gap-x-2 items-center  text-liteBlack dark:text-white mt-[10px] md:mt-0">
+                    <textarea
+                      defaultValue=" Function: deposit(address valAddr)
+
+                      MethodID: 0xf340fa01
+                      [1] 0000000000000000000000002efd3cf0733421aec3e4202480d0a90bd1575149"
+                      className="w-full h-[100px]"
+                      disabled
+                    ></textarea>
                   </div>
                 </li>
               </>
             )}
-            <li className="py-2 border-b md:flex items-center">
-              <Button
-                className=" !capitalize !bg-primaryColor w-full"
-                variant="contained"
-                onClick={seeMoreBtn}
-              >
-                {!seeMore ? (
-                  <span className="flex items-center">
-                    see more&nbsp;
-                    <AiOutlineArrowDown />
-                  </span>
-                ) : (
-                  <span className="flex items-center">
-                    see less&nbsp;
-                    <AiOutlineArrowUp />
-                  </span>
-                )}
-              </Button>
+
+            <li className="py-2 border-b  md:flex items-center">
+              <div className="w-[50%] md:w-[20%] text-ashText flex  items-center gap-x-1">
+                <AiOutlineQuestionCircle className="text-[18px]" /> More
+                Details:
+              </div>
+              <div className="w-[100%] md:w-[80%] md:flex gap-x-2 items-center  text-liteBlack dark:text-white mt-[10px] md:mt-0">
+                <Link className="text-primaryColor flex" onClick={seeMoreBtn}>
+                  Click here to see more&nbsp;
+                  {!seeMore ? (
+                    <span className="flex items-center">
+                      <AiOutlineArrowDown />
+                    </span>
+                  ) : (
+                    <span className="flex items-center">
+                      <AiOutlineArrowUp />
+                    </span>
+                  )}
+                </Link>
+              </div>
+            </li>
+            <li className="py-2 border-b md:flex  overflow-hidden">
+              <div className="w-[50%] md:w-[20%] text-ashText flex  items-center gap-x-1">
+                <AiOutlineQuestionCircle className="text-[18px]" /> Gas Private
+                Note:
+              </div>
+              <div className="w-[100%] md:w-[80%] md:flex gap-x-2 items-center  text-liteBlack dark:text-white mt-[10px] md:mt-0">
+                <div className="">
+                  <input type="text" className="!border-primaryColor border  !outline-none w-full  bg-white dark:!bg-liteBlack rounded-md p-1" />
+                  <p className="text-[12px] text-liteBlack dark:text-white mt-2">
+                    Tip: A private note (up to 100 characters) can be saved and
+                    is useful for transaction tracking. Please DO NOT store any
+                    passwords or private keys here.
+                  </p>
+                </div>
+              </div>
             </li>
           </ul>
+            )
+          }
+          {
+            logs && (
+              <>
+              sdf
+              </>
+            )
+          }
         </div>
       </div>
     </div>
