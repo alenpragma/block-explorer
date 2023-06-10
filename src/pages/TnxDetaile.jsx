@@ -52,7 +52,7 @@ const TnxDetaile = () => {
       <div className="container ">
         <div className="w-full relative  mb-9 mt-[-20px] shadow-xl md:rounded-tr-md rounded-b-md px-3 bg-white dark:!bg-liteBlack">
           <div className="p-3 h-[70px] flex text-[12px] md-text-base justify-between items-center w-full md:w-[50%] absolute top-[-70px] rounded-t-md left-0 z-3 border-b dark:text-white text-liteBlack  bg-white dark:!bg-liteBlack">
-            <h4 className="font-semibold m-4 text-primaryColor">
+            <h4 className="font-semibold  text-primaryColor">
               Transaction Details
             </h4>{" "}
           </div>
@@ -260,7 +260,7 @@ const TnxDetaile = () => {
                 </Link>
               </div>
             </li>
-            <li className="py-2 border-b md:flex  overflow-hidden">
+            <li className="py-2 md:flex  overflow-hidden">
               <div className="w-[50%] md:w-[20%] text-ashText flex  items-center gap-x-1">
                 <AiOutlineQuestionCircle className="text-[18px]" /> Gas Private
                 Note:
@@ -292,4 +292,4 @@ const TnxDetaile = () => {
   );
 };
 
-export default TnxDetaile;
+export default TnxDetaile
